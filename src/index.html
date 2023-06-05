@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Homework 7</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-    <ul>
-      <li><a href="01-gallery.html">Image gallery</a></li>
-      <li><a href="02-lightbox.html">SimpleLightbox library</a></li>
-    </ul>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Homework 7</title>
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+
+<body birds-body class="birds-body">
+  <ul>
+    <li><a href="01-gallery.html">Image gallery</a></li>
+    <li><a href="02-lightbox.html">SimpleLightbox library</a></li>
+  </ul>
+  <canvas class="birds-body" width="100%" height="100%"
+    style="display: block; position: absolute; z-index: 0; top: 0px; left: 0px; width: 100%; height: 100%;"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js"></script>
+  <script>
+    VANTA.BIRDS({
+      el: ".birds-body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 1000.00,
+      minWidth: 1000.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      speedLimit: 3.00,
+      separation: 100.00,
+      backgroundAlpha: 0.00
+    })
+  </script>
+</body>
+
 </html>
